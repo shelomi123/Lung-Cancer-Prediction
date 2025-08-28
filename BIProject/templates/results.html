@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediction Results</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous">
+  <style>
+    .container {
+      margin-top: 50px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .alert {
+      margin-top: 50px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .alert-success {
+      color: #155724;
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+    }
+    .alert-warning {
+      color: #856404;
+      background-color: #fff3cd;
+      border-color: #ffeeba;
+    }
+    .alert-danger {
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+    }
+    p {
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .consult-doctor {
+      color: #dc3545;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color-glass/48/lungs.png">
+</head>
+<body>
+  <div class="container">
+    <h1>Prediction Results</h1>
+    <div class="alert alert-danger" role="alert">
+      The predicted level of Lung Cancer is High.
+    </div>
+
+    <p>If you have any concerns about your lung health, please consult a doctor.</p>
+    <p>Click <a href="https://www.google.com/maps/search/lung+cancer+doctors/" class="consult-doctor">here</a> to find a doctor near you.</p>
+
+    <!-- Details Button and Collapse Content -->
+    <button class="btn btn-info mt-4" type="button" data-toggle="collapse" data-target="#predictionDetails" aria-expanded="false" aria-controls="predictionDetails">
+      Show Details
+    </button>
+    <div class="collapse mt-3" id="predictionDetails">
+      <div class="card card-body">
+        <h5>Prediction Details</h5>
+        <p>Accuracy: 95%</p>
+        <p>Precision: 92%</p>
+        <p>Recall: 90%</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZVP6MKI3FEl6ZSSmxxUenrN5fW7baOIJzE9pi5M1UpNQXZERe6SUIha/uFzgnn6o" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-LtrjvnR4GearyJBUS8p3COmtyFU+eNV6p3ljrD7px60IhQkn7tWtqAz0Q7C5mXIj" crossorigin="anonymous"></script>
+
+  <!-- Custom Script to Ensure Initial Collapse State -->
+  <script>
+    $(document).ready(function() {
+      $('#predictionDetails').collapse('hide');  // Ensure it starts hidden
+    });
+  </script>
+</body>
+</html>
